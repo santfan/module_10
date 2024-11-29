@@ -43,3 +43,6 @@ thread_2 = threading.Thread(target=Bank.take, args=(bk, ))
 # Стартуем потоки
 thread_1.start()
 thread_2.start()
+thread_1.join()
+thread_2.join()
+print(f'Итоговый баланс: {bk.balance}')
